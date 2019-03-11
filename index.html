@@ -1,5 +1,5 @@
 <head>
-	<title>Colorful Fills</title>
+	<title>色彩填滿 - Colorful Fills</title>
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link href="stylesheets/theme.css" rel="stylesheet">
 	<script type="text/javascript" src="src/data.js"></script>
@@ -10,24 +10,24 @@
 	<div id='loading'>
 		<div style='position:absolute;top:50%;transform:translate(0,-50%);background-color:#7f7f7f;width:100%;text-align:center'>
 			<b style='font-size:72px'>
-				<text style='color:#ff0000'>C</text><text style='color:#ff7f00'>o</text><text style='color:#ffff00'>l</text><text style='color:#00ff00'>o</text><text style='color:#00ffff'>r</text><text style='color:#0000ff'>f</text><text style='color:#7f00ff'>u</text><text style='color:#ff00ff'>l</text>
+				<text style='color:#ff0000'>色</text><text style='color:#7fff00'>彩</text><text style='color:#00ffff'>填</text><text style='color:#7f00ff'>滿</text>
 				Fills
 			</b>
-			<br>Now loading...</div>
-		<div style='position:absolute;bottom:0;left:0'>Prototype: Tick tock...<br>2018 Aarex T.</div>
+			<br>現在加載中……</div>
+		<div style='position:absolute;bottom:0;left:0'>原形: 滴答……<br>2018 Aarex T.</div>
 	</div>
 	<div id='tabs'>
-		<button class='button_tabChosen' id='tabButton_colors' onclick='switchTab("colors")'>Colors</button>
-		<button id='tabButton_options' onclick='switchTab("options")'>Options</button>
-		<button id='tabButton_statistics' onclick='switchTab("statistics")'>Statistics</button>
-		<button id='tabButton_about' onclick='switchTab("about")'>About</button>
+		<button class='button_tabChosen' id='tabButton_colors' onclick='switchTab("colors")'>顏色</button>
+		<button id='tabButton_options' onclick='switchTab("options")'>選項</button>
+		<button id='tabButton_statistics' onclick='switchTab("statistics")'>統計</button>
+		<button id='tabButton_about' onclick='switchTab("about")'>關於</button>
 	</div>
 	<table id='tab_colors'>
 		<tr id='clock' style='display:none'>
-			<td><b>Clock speed</b>: <text id='clockSpeed'></text> Hz</td>
+			<td><b>時鐘速度</b>: <text id='clockSpeed'></text>赫茲</td>
 			<td colspan=2>
 				(<b id='multiplier_red' style='color:#ff0000'></b> x <b id='multiplier_green' style='color:#00ff00'></b> x <b id='multiplier_blue' style='color:#0000ff'></b>)<sup>1/3</sup> = <b id='multiplied'></b><br>
-				<b>Upgrade clock speed at</b>: <text id='nextClockSpeedThreshold'></text>
+				<b>升級時鐘速度，在</b>: <text id='nextClockSpeedThreshold'></text>
 			</td>
 		</tr>
 		<tr>
@@ -36,33 +36,33 @@
 			<td class='color' id='fill_blue' style='background-color: #0000ff;display:none'><div class='colorNotFilled' id='notFilled_blue'></div></td>
 		</tr>
 		<tr>
-			<td style='color: #ff0000'><b>Red</b>: <text id='amountValue_red'>0</text></td>
-			<td id='amount_green' style='color: #00ff00;display:none'><b>Green</b>: <text id='amountValue_green'>0</text></td>
-			<td id='amount_blue' style='color: #0000ff;display:none'><b>Blue</b>: <text id='amountValue_blue'>0</text></td>
+			<td style='color: #ff0000'><b>紅色</b>: <text id='amountValue_red'>0</text></td>
+			<td id='amount_green' style='color: #00ff00;display:none'><b>綠色</b>: <text id='amountValue_green'>0</text></td>
+			<td id='amount_blue' style='color: #0000ff;display:none'><b>藍色</b>: <text id='amountValue_blue'>0</text></td>
 		</tr>
 		<tr>
 			<td>
-				<b>Fill gain</b> (<text id='fillGainLvl_red'>Lv. 1</text>):<br>
+				<b>填滿獲得數</b> (<text id='fillGainLvl_red'>等級 1</text>):<br>
 				<text id='fillGainRate_red'>1.00/s (+0.20/s)</text><br>
-				<button id='fillGainUpgrade_red' onclick='upgradeFillGain("red")'>Cost: 10</button><br>
-				<button id='fillGainUpgradeAll_red' style='display:none' onclick='upgradeFillGain("red",true)'>Max All</button>
+				<button id='fillGainUpgrade_red' onclick='upgradeFillGain("red")'>成本: 10</button><br>
+				<button id='fillGainUpgradeAll_red' style='display:none' onclick='upgradeFillGain("red",true)'>全部最大</button>
 			</td>
 			<td id='fillGain_green' style='display:none'>
-				<b>Fill gain</b> (<text id='fillGainLvl_green'></text>):<br>
+				<b>填滿獲得數</b> (<text id='fillGainLvl_green'></text>):<br>
 				<text id='fillGainRate_green'></text><br>
 				<button id='fillGainUpgrade_green' onclick='upgradeFillGain("green")'></button><br>
-				<button id='fillGainUpgradeAll_green' onclick='upgradeFillGain("green",true)'>Max All</button>
+				<button id='fillGainUpgradeAll_green' onclick='upgradeFillGain("green",true)'>全部最大</button>
 			</td>
 			<td id='fillGain_blue' style='display:none'>
-				<b>Fill gain</b> (<text id='fillGainLvl_blue'></text>):<br>
+				<b>填滿獲得數</b> (<text id='fillGainLvl_blue'></text>):<br>
 				<text id='fillGainRate_blue'></text><br>
 				<button id='fillGainUpgrade_blue' onclick='upgradeFillGain("blue")'></button><br>
-				<button id='fillGainUpgradeAll_blue' onclick='upgradeFillGain("blue",true)'>Max All</button>
+				<button id='fillGainUpgradeAll_blue' onclick='upgradeFillGain("blue",true)'>全部最大</button>
 			</td>
 		</tr>
 		<tr>
 			<td id='upgrades_red' style='display:none'>
-				Every red gives 5%<br>of green up to 1/s.<br><button class='button_unaffordable' id='upgrade_red_1' onclick='buyUpgrade("red",1)'></button>
+				每個紅色給予自己的5%<br>到綠色，高達每秒1個。<br><button class='button_unaffordable' id='upgrade_red_1' onclick='buyUpgrade("red",1)'></button>
 				<div id='upgradeDescription_red_2'>Increase every red fill gain upgrade by +0.40/s.<br><button class='button_unaffordable' id='upgrade_red_2' onclick='buyUpgrade("red",2)'></button></div>
 				<div id='upgradeDescription_red_3'>Break the cap for first red upgrade.<br><button class='button_unaffordable' id='upgrade_red_3' onclick='buyUpgrade("red",3)'></button></div>
 			</td>
